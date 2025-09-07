@@ -1,0 +1,515 @@
+/* ==================== FONTS ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap');
+
+/* ==================== RESET ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(180deg, #2c2c2c, #f0f0f0);
+    color: #0a0a0a;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Subtle Noise Overlay */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/noise.png'); /* optional subtle static noise */
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ==================== HEADER ==================== */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(30, 30, 30, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 6px 12px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: #fff;
+    color: #0a0a0a;
+}
+
+/* ==================== HERO ==================== */
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.hero h2 span {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    color: #f0f0f0;
+    text-shadow: 0 0 15px #fff, 0 0 30px #aaa;
+    margin-top: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.btn {
+    background: #333;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid #555;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #0a0a0a;
+}
+
+/* ==================== SECTIONS ==================== */
+section {
+    padding: 120px 50px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    z-index: 0;
+}
+
+/* ==================== ABOUT ==================== */
+.about h2 {
+    font-family: 'Orbitron', sans-serif; /* sci-fi, Y2K font */
+    font-size: 5rem; /* very big for emphasis */
+    color: #000; /* black subtitle */
+    text-shadow: 0 0 10px #555, 0 0 20px #888; /* subtle glow for Y2K effect */
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.about-container img {
+    width: 360px; /* bigger portrait rectangle */
+    height: 480px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid #888;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5), 0 0 90px rgba(200, 200, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-container img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 70px rgba(255, 255, 255, 0.7), 0 0 110px rgba(200, 200, 255, 0.5);
+}
+
+.about-text {
+    max-width: 750px;
+    text-align: left;
+}
+
+.about-text p {
+    font-family: 'Orbitron', sans-serif; /* sci-fi Y2K font */
+    font-size: 2rem; /* bigger for emphasis */
+    line-height: 2;
+    color: #0a0a0a; /* dark text for paragraph */
+    text-shadow: 0 0 5px #fff, 0 0 10px #aaa; /* subtle glow */
+}
+
+/* ==================== TALENTS ==================== */
+.talents h2 {
+    font-family: 'Orbitron', sans-serif; /* sci-fi font */
+    font-size: 4.5rem; /* big title */
+    color: #000; /* black subtitle */
+    text-shadow: 0 0 10px #555, 0 0 25px #888; /* subtle glow */
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.talent-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: linear-gradient(135deg, #262424, #aaaaaa, #1a1a1a); /* white → gray → black */
+    color: #0a0a0a; /* dark text for contrast */
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem; /* bigger talent text */
+    padding: 30px 40px;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    cursor: default;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(170, 170, 170, 0.3); /* subtle glow */
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.7), 0 0 80px rgba(170, 170, 170, 0.5);
+    background: linear-gradient(135deg, #f5f5f5, #999999, #0a0a0a); /* hover gradient shift */
+}
+/* ==================== PROJECTS ==================== */
+
+.projects h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4.2rem; /* slightly smaller */
+    color: #000;
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 12px #ccc,
+        0 0 20px #999,
+        0 0 30px #666;
+    margin-bottom: 35px; /* reduced spacing */
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* reduced gap */
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #181818, #aaaaaa, #1a1a1a);
+    color: #0a0a0a;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem; /* slightly smaller text */
+    padding: 25px 30px; /* reduced padding */
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(170, 170, 170, 0.3);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.08); /* slightly smaller hover scale */
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.7), 0 0 60px rgba(170, 170, 170, 0.5);
+    background: linear-gradient(135deg, #f5f5f5, #999999, #0a0a0a);
+}
+
+
+
+/* ==================== SKILLS ==================== */
+.skill-bars {
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.bar {
+    display: block;
+    height: 12px;
+    background: #555;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: #f0f0f0;
+}
+
+.html { width: 90%; }
+.css { width: 80%; }
+.js { width: 70%; }
+.speak { width: 95%; }
+
+/* ==================== CONTACT ==================== */
+.contact {
+    text-align: center;
+    margin: 80px 0;
+}
+
+.contact h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4.2rem;
+    color: #000;
+    text-shadow: 0 0 10px #555, 0 0 25px #888;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    color: #0a0a0a;
+    margin-bottom: 40px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.social-icon img {
+    width: 70px; /* big and noticeable */
+    height: 70px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(170, 170, 170, 0.3);
+    border-radius: 20%; /* slightly rounded edges for Y2K vibe */
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8), 0 0 80px rgba(170, 170, 170, 0.5);
+}
+
+/* ==================== FOOTER ==================== */
+/* ==================== FOOTER ==================== */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(135deg, #1a1a1a, #555555); /* dark Y2K gradient */
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #aaa; /* subtle glow */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Optional hover glow for footer text */
+footer p:hover {
+    text-shadow: 0 0 20px #fff, 0 0 40px #ccc;
+    cursor: default;
+}
+
+/* ==================== FLOATING SHAPES ==================== */
+.shape {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #888;
+    opacity: 0.3;
+    border-radius: 50%;
+    animation: float 15s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) translateX(0) rotate(0deg); }
+    50% { transform: translateY(-150px) translateX(70px) rotate(180deg); }
+    100% { transform: translateY(0) translateX(0) rotate(360deg); }
+}
+
+/* ==================== ANIMATIONS ==================== */
+
+/* 1. Hero text fade-up animation */
+.hero h2, .hero p, .hero .btn {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards;
+}
+
+.hero h2 { animation-delay: 0.2s; }
+.hero p { animation-delay: 0.5s; }
+.hero .btn { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+/* 2. About Me image floating */
+.about-container img {
+    animation: floatImg 3s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.02); }
+}
+
+/* 3. Talents & Projects cards gentle floating */
+.talent-cards .card, .project-cards .project-card {
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-5px) scale(1.02); }
+}
+
+/* 4. Fade-in on scroll */
+.section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ==================== MOBILE RESPONSIVE ==================== */
+@media screen and (max-width: 768px) {
+    
+    /* Navigation */
+    header nav ul.nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* Hero Section */
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .hero .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    /* About Me Section */
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .about-container img {
+        width: 200px; /* smaller image */
+        height: auto;
+    }
+    .about-text p {
+        font-size: 1.1rem; /* easier to read on mobile */
+    }
+
+    /* Talents & Projects */
+    .talent-cards, .project-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .talent-cards .card, .project-cards .project-card {
+        width: 90%;
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+
+    /* Skills */
+    .skill-bars {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .skill p {
+        font-size: 1rem;
+    }
+
+    /* Contact */
+    .socials {
+        gap: 25px;
+    }
+    .social-icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 1.2rem;
+    }
+}
+.project-cards a {
+    text-decoration: none; /* removes underline */
+    color: inherit;        /* uses the card's text color */
+    display: block;        /* makes the entire card clickable */
+}
+
+/* Optional: make hover effect for cards */
+.project-cards a:hover .project-card {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(170, 170, 170, 0.2);
+}
