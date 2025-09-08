@@ -433,22 +433,6 @@ footer p:hover {
     opacity: 1;
     transform: translateY(0);
 }
-/* Particle Background */
-#particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: #000000; /* dark space vibe */
-}
-
-/* Ensure content stays above particles */
-#particles-section {
-    position: relative;
-    z-index: 1;
-}
 
 /* ==================== MOBILE RESPONSIVE ==================== */
 @media screen and (max-width: 768px) {
@@ -531,3 +515,4 @@ footer p:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(170, 170, 170, 0.2);
 
 }
+
